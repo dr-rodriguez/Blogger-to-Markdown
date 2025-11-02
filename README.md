@@ -59,3 +59,13 @@ This will create time-stamped markdown files in the `output` directory, one for 
 
 You'll want to review the output and make sure it looks good. 
 There could be errors depending on the structure of your posts or if you use custom scripts, but for the most part it should work.
+
+## Additional Steps
+
+There is a script to download the images from the blog posts and add them to the output directory.   
+This is not as well tested, but works OK to extract and update the markdown files with the local image paths if you are using an assets/img/posts directory for a Jekyll site.
+
+You can run the script with:
+```bash
+uv run python src/download_images.py
+```
