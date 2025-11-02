@@ -1,9 +1,16 @@
+import os
+
+from dotenv import load_dotenv
+
 from converter import parse_blogger_xml, convert_to_markdown
 
 
-BLOG_FILE = "Blogger/Blogs/StrakulsThoughts/feed.atom"
-OUTPUT_DIR = "output"
-TEMPLATE_FILE = "template.md"
+# Load environment variables from .env file
+load_dotenv()
+
+BLOG_FILE = os.getenv("BLOG_FILE", "feed.atom")
+OUTPUT_DIR = os.getenv("OUTPUT_DIR", "output")
+TEMPLATE_FILE = os.getenv("TEMPLATE_FILE", "template.md")
 
 
 def main():

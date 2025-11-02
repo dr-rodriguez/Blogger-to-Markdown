@@ -18,9 +18,9 @@ Blogger/
     - BlogName/
       - feed.atom
       - otherfiles...
-    - Albums/
-    - Comments/
-    - Profile/
+  - Albums/
+  - Comments/
+  - Profile/
 ```
 
 You'll want to grab the `feed.atom` file.
@@ -34,8 +34,18 @@ uv sync
 
 ### Configure the script
 
-Open the `src/main.py` file and configure the `BLOG_FILE` and `OUTPUT_DIR` variables.
-If you want to use a different template, you can change the `TEMPLATE_FILE` variable.
+Copy the `.env.example` file to `.env` and update the configuration values:
+
+```bash
+cp .env.example .env
+```
+
+Then edit the `.env` file with your preferred settings:
+- `BLOG_FILE`: Path to your Blogger XML feed file
+- `OUTPUT_DIR`: Directory where markdown files will be written to
+- `TEMPLATE_FILE`: Template file for markdown output
+
+The script will use these values from the `.env` file. If no `.env` file is present, it will use the default values shown in `.env.example`.
 
 ### Run the script
 
