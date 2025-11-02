@@ -1,6 +1,6 @@
 ---
 layout: post
-read_time: false
+read_time: true
 show_date: true
 title: "POST TITLE"
 date: DATE

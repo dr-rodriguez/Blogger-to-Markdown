@@ -1,27 +1,15 @@
-import os
-import xml.etree.ElementTree as ET
+from converter import parse_blogger_xml, convert_to_markdown
 
-BLOG_FILE = "Blogger/Albums/StrakulsThoughts/feed.atom"
+
+BLOG_FILE = "Blogger/Blogs/StrakulsThoughts/feed.atom"
 OUTPUT_DIR = "output"
 TEMPLATE_FILE = "template.md"
-
-
-def parse_blogger_xml(file_path):
-    """Parse the Blogger XML file and return the root element."""
-    tree = ET.parse(file_path)
-    root = tree.getroot()
-    return root
-
-
-def convert_to_markdown(root):
-    """Go through each entry in the XML and convert it to Markdown."""
-    pass
 
 
 def main():
     print(f"Converting {BLOG_FILE} to Markdown...")
     root = parse_blogger_xml(BLOG_FILE)
-    convert_to_markdown(root)
+    convert_to_markdown(root, output_dir=OUTPUT_DIR, template_file=TEMPLATE_FILE)
 
 
 if __name__ == "__main__":
