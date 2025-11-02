@@ -8,12 +8,14 @@ wheels/
 
 # Virtual environments
 .venv
+.vscode/
 
 # Input
 Blogger/
 
 # Output
 output/
+assets/img/posts/
 
 # Environment variables
 .env
